@@ -3,7 +3,9 @@ from memory_profiler import profile
 @profile
 def prueba():
     sum = 0
-    n = int(input("Número: "))
+    b = int(input("Ingrese la base: "))
+    e = int(input("Ingrese el exponente: "))
+    n = b**e
     start_time = time()
     while (n>0):
         n = n//2
