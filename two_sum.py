@@ -1,11 +1,13 @@
+def remove_element(my_set, element):
+    if element in my_set:
+        my_set.remove(element)
+    return my_set
+
 def two_sum(lst, target):
-    lista=lst["elements"]
-    encontrado=False
-    for numero in lista:
-        for otros_elem in lista[numero:lst["size"]]:
+    for numero in lst:
+        lst2=lst
+        lst2=remove_element(lst,numero)
+        for otros_elem in lst2:
             if otros_elem+numero==target:
-                encontrado=True
-                return encontrado
-    return encontrado
-        
-two_sum({"elements":[1,4,8,10,6],"size":5},9)
+                return True
+    return False
